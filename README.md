@@ -1,56 +1,164 @@
-# Welcome to your Expo app 👋
+# 🚗 24 Trip – Mobile Application
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**24 Trip** is a ride-sharing mobile application designed to connect passengers and drivers for convenient, affordable, and reliable long-distance travel across Sri Lanka.
 
-## Get started
+Built using **React Native, Expo, and TypeScript**, the mobile application integrates with the existing 24 Trip web platform and backend.
 
-1. Install dependencies
+## 🚀 Tech Stack
 
-   ```bash
-   npm install
-   ```
+| Technology | Purpose |
+|---|---|
+| React Native | Cross-platform mobile development |
+| Expo | Mobile development framework |
+| TypeScript | Type-safe application development |
+| Expo Router / React Navigation | Mobile screen navigation |
+| Next.js | Existing backend and API services |
+| Supabase PostgreSQL | Database |
+| Prisma | Database ORM (backend) |
+| Cloudinary | Image storage |
+| Vercel | Backend hosting |
 
-2. Start the app
+## ✨ Features
 
-   ```bash
-   npx expo start
-   ```
+### 👤 Passenger Features
+- Search for available trips
+- View trip details and available seats
+- Book seats on available trips
+- Manage trip bookings
+- View booking history
+- Manage passenger profiles
 
-In the output, you'll find options to open the app in a
+### 🚘 Driver Features
+- Create and publish trips
+- Manage available seats
+- View passenger bookings
+- Manage trip schedules
+- Update trip status
+- Manage driver and vehicle information
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 🔐 Authentication
+- User registration and login
+- Role-based access for passengers and drivers
+- Secure integration with the existing backend
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+> **Development Note:** The features listed above represent the planned functionality. The mobile UI and backend integration are being developed progressively.
 
-## Get a fresh project
+## 🏗️ System Architecture
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+24 Trip Platform
+│
+├── 🌐 Web Application
+│   └── Next.js + TypeScript
+│
+├── 📱 Mobile Application
+│   └── React Native + Expo
+│
+└── ⚙️ Existing Backend
+    ├── Next.js API Routes
+    ├── Prisma ORM
+    ├── Supabase PostgreSQL
+    └── Cloudinary
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Both the web and mobile applications are designed to use the same backend services and database.
 
-### Other setup steps
+## 📂 Project Structure
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Proposed structure:
 
-## Learn more
+```text
+24trip-mobile/
+├── app/                 # Expo Router screens
+│   ├── (auth)/          # Authentication screens
+│   ├── (tabs)/          # Main navigation screens
+│   └── _layout.tsx      # Root navigation layout
+├── components/          # Reusable UI components
+├── constants/           # Theme and constants
+├── hooks/               # Custom React hooks
+├── services/            # Backend API integration
+├── types/               # TypeScript definitions
+├── assets/              # Images, icons and fonts
+├── package.json
+├── app.json
+└── tsconfig.json
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+*The actual directory structure may change during development.*
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🛠️ Getting Started
 
-## Join the community
+### Prerequisites
 
-Join our community of developers creating universal apps.
+- Node.js (supported LTS version)
+- npm
+- Expo Go on an Android device
+- VS Code or another code editor
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/24trip-mobile.git
+cd 24trip-mobile
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the Development Server
+
+```bash
+npx expo start
+```
+
+### 4. Run on Android
+
+1. Install Expo Go from the Google Play Store.
+2. Connect your computer and Android device to the same Wi-Fi network.
+3. Scan the QR code displayed in the terminal.
+4. Open the application using Expo Go.
+
+## 🔗 Backend Integration
+
+The mobile application is intended to communicate with the existing **24 Trip Next.js backend** through API endpoints.
+
+Example environment configuration:
+
+```env
+EXPO_PUBLIC_API_URL=https://your-api-domain.com/api
+```
+
+Only expose public configuration through `EXPO_PUBLIC_` variables. Keep database credentials, API secrets, and other sensitive keys on the backend.
+
+## 🗺️ Development Roadmap
+
+- [x] Initialize React Native application with Expo
+- [x] Run the application on Android using Expo Go
+- [ ] Implement mobile branding and theme
+- [ ] Build reusable UI components
+- [ ] Configure screen navigation
+- [ ] Develop passenger interfaces
+- [ ] Develop driver interfaces
+- [ ] Integrate authentication
+- [ ] Connect existing backend APIs
+- [ ] Implement trip searching and booking
+- [ ] Perform testing and optimization
+- [ ] Prepare Android production build
+
+## 🎯 Project Goal
+
+To create a user-friendly mobile experience for long-distance ride-sharing in Sri Lanka while maintaining compatibility with the existing 24 Trip web platform.
+
+## 👨‍💻 Developer
+
+**Thirugnanam Venujan**
+
+- Portfolio: https://venuu.codes
+- Location: Sri Lanka
+
+---
+
+**24 Trip – Connecting People, Sharing Journeys.** 🚗
