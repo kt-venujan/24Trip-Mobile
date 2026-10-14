@@ -1,0 +1,35 @@
+export const theme = {
+  colors: {
+    primary: "#059669",
+    primaryDark: "#047857",
+    mint: "#ecfdf5",
+    ink: "#0f172a",
+    muted: "#64748b",
+    border: "#e2e8f0",
+    canvas: "#f6f8fc",
+    white: "#ffffff",
+    blue: "#0369a1",
+    sky: "#e0f2fe",
+    amber: "#92400e",
+    cream: "#fffbeb",
+    danger: "#b91c1c",
+    rose: "#fef2f2",
+  },
+  spacing: { xs: 4, sm: 8, md: 16, lg: 24, xl: 32 },
+  radius: { sm: 12, md: 20, lg: 28 },
+  type: { hero: 34, title: 26, heading: 19, body: 15, small: 12 },
+  shadow: {
+    shadowColor: "#0f172a",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.04,
+    shadowRadius: 16,
+    elevation: 2,
+  },
+} as const;
+export const assets = {
+  logo: require("../../assets/brand/24_Trip_Logo.png"),
+  ella: require("../../assets/brand/nine_arch.png"),
+  jaffna: require("../../assets/brand/nallur.png"),
+  kandy: require("../../assets/brand/buddhist.png"),
+  galle: require("../../assets/brand/galle_fort.png"),
+};
